@@ -1,0 +1,197 @@
+<svg width="550" height="736" viewBox="0 0 550 736" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <style>
+    .bubble {
+      fill: #e9e9eb;
+    }
+    a {
+      fill: #0079ff;
+    }
+    text {
+      fill: #242424;
+      font-size: 18px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      letter-spacing: -0.02em;
+    }
+    .small {
+      font-size: 16px;
+    }
+    .emoji {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+    .tile-0 { fill: #ebedf0; }
+    .tile-1 { fill: #9be9a8; }
+    .tile-2 { fill: #40c463; }
+    .tile-3 { fill: #30a14e; }
+    .tile-4 { fill: #216e39; }
+
+    .typing-1 { opacity: 0; animation: fade-in-out 1.5s; }
+    .typing-2 { opacity: 0; animation: wait 2.5s, fade-in-out 1.5s 2.5s; }
+    .typing-3 { opacity: 0; animation: wait 5s, fade-in-out 1.5s 5s; }
+    .typing-4 { opacity: 0; animation: wait 7.5s, fade-in-out 1.5s 7.5s; }
+    .typing-5 { opacity: 0; animation: wait 10s, fade-in-out 1.5s 10s; }
+    .typing-6 { opacity: 0; animation: wait 12.5s, fade-in-out 1.5s 12.5s; }
+    .typing-7 { opacity: 0; animation: wait 15s, fade-in-out 1.5s 15s; }
+    .typing-8 { opacity: 0; animation: wait 17.5s, fade-in-out 1.5s 17.5s; }
+
+    .msg-1 { animation: wait 1.7s, msg-1 0.2s 1.7s; }
+    .msg-2 { animation: wait 4.2s, msg-2 0.2s 4.2s; }
+    .msg-3 { animation: wait 6.7s, msg-3 0.2s 6.7s; }
+    .msg-4 { animation: wait 9.2s, msg-4 0.2s 9.2s; }
+    .msg-5 { animation: wait 11.7s, msg-5 0.2s 11.7s; }
+    .msg-6 { animation: wait 14.2s, msg-6 0.2s 14.2s; }
+    .msg-7 { animation: wait 16.7s, msg-7 0.2s 16.7s; }
+    .msg-8 { animation: wait 19.2s, msg-8 0.2s 19.2s; }
+
+    @keyframes wait {
+      0%, 100% { opacity: 0; }
+    }
+    @keyframes fade-in-out {
+      0%, 100% { opacity: 0; }
+      25%, 90% { opacity: 1; }
+    }
+    @keyframes msg-1 { from { opacity: 0; transform: translate(10px, 5px); } to { opacity: 1; transform: translate(10px, 0); } }
+    @keyframes msg-2 { from { opacity: 0; transform: translate(10px, 53px); } to { opacity: 1; transform: translate(10px, 48px); } }
+    @keyframes msg-3 { from { opacity: 0; transform: translate(10px, 125px); } to { opacity: 1; transform: translate(10px, 120px); } }
+    @keyframes msg-4 { from { opacity: 0; transform: translate(10px, 197px); } to { opacity: 1; transform: translate(10px, 192px); } }
+    @keyframes msg-5 { from { opacity: 0; transform: translate(10px, 269px); } to { opacity: 1; transform: translate(10px, 264px); } }
+    @keyframes msg-6 { from { opacity: 0; transform: translate(10px, 565px); } to { opacity: 1; transform: translate(10px, 560px); } }
+    @keyframes msg-7 { from { opacity: 0; transform: translate(10px, 637px); } to { opacity: 1; transform: translate(10px, 632px); } }
+    @keyframes msg-8 { from { opacity: 0; transform: translate(10px, 685px); } to { opacity: 1; transform: translate(10px, 680px); } }
+
+    @media (prefers-color-scheme: dark) {
+      .bubble { fill: #3b3b3d; }
+      text { fill: #dcdcdc; }
+      a { fill: #0c82f9; }
+      .tile-0 { fill: #30363d; }
+    }
+  </style>
+
+  <defs>
+    <g id="typing">
+      <rect x="8.27246" width="69.7276" height="42" rx="20.9774" class="bubble" />
+      <circle cx="13.591" cy="33.091" r="7.68185" class="bubble" />
+      <circle cx="3.54547" cy="41.9547" r="3.54547" class="bubble" />
+      <circle cx="27.4778" cy="20.9773" r="5.02275" fill="#999999">
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="42.8411" cy="20.9773" r="5.02275" fill="#999999">
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.2s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="58.2054" cy="20.9773" r="5.02275" fill="#999999">
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.4s" repeatCount="indefinite" />
+      </circle>
+    </g>
+    <g id="iso-tile">
+      <path d="M0 7 L12 0 L24 7 L12 14 Z" />
+      <path d="M0 7 L12 14 L12 24 L0 17 Z" opacity=".72" />
+      <path d="M24 7 L12 14 L12 24 L24 17 Z" opacity=".55" />
+    </g>
+  </defs>
+
+  <g transform="translate(10, 0)" class="typing-1"><use href="#typing" /></g>
+  <g transform="translate(10, 0)" class="msg-1">
+    <rect width="158" height="42" rx="18.0355" class="bubble" />
+    <text x="15" y="27">Hi, I'm Seraphin</text>
+  </g>
+
+  <g transform="translate(10, 48)" class="typing-2"><use href="#typing" /></g>
+  <g transform="translate(10, 48)" class="msg-2">
+    <rect width="438" height="66.1302" rx="18.0355" class="bubble" />
+    <text x="15" y="27">I live in Huye, Rwanda where it's supposed to be</text>
+    <text x="15" y="50">78° F (26° C) and <tspan class="emoji">☀️</tspan> today.</text>
+  </g>
+
+  <g transform="translate(10, 120)" class="typing-3"><use href="#typing" /></g>
+  <g transform="translate(10, 120)" class="msg-3">
+    <rect width="430" height="66.1302" rx="18.0355" class="bubble" />
+    <text x="15" y="27">I'm a software developer and a student at RCA,</text>
+    <text x="15" y="50">learning by building useful projects.</text>
+  </g>
+
+  <g transform="translate(10, 192)" class="typing-4"><use href="#typing" /></g>
+  <g transform="translate(10, 192)" class="msg-4">
+    <rect width="455" height="66.1302" rx="18.0355" class="bubble" />
+    <text x="15" y="27">My favorite project is isometric-contributions.</text>
+    <text x="15" y="50">It shows GitHub contributions like this:</text>
+  </g>
+
+  <g transform="translate(10, 264)" class="typing-5"><use href="#typing" /></g>
+  <g transform="translate(10, 264)" class="msg-5">
+    <rect width="512" height="290" rx="18.0355" class="bubble" />
+    <g transform="translate(42, 26) scale(1.02)">
+      <use href="#iso-tile" x="0" y="126" class="tile-0" />
+      <use href="#iso-tile" x="26" y="112" class="tile-1" />
+      <use href="#iso-tile" x="52" y="98" class="tile-2" />
+      <use href="#iso-tile" x="78" y="84" class="tile-3" />
+      <use href="#iso-tile" x="104" y="70" class="tile-4" />
+      <use href="#iso-tile" x="130" y="56" class="tile-2" />
+      <use href="#iso-tile" x="156" y="42" class="tile-1" />
+      <use href="#iso-tile" x="182" y="28" class="tile-3" />
+      <use href="#iso-tile" x="208" y="14" class="tile-2" />
+      <use href="#iso-tile" x="234" y="0" class="tile-1" />
+
+      <use href="#iso-tile" x="26" y="140" class="tile-1" />
+      <use href="#iso-tile" x="52" y="126" class="tile-3" />
+      <use href="#iso-tile" x="78" y="112" class="tile-4" />
+      <use href="#iso-tile" x="104" y="98" class="tile-2" />
+      <use href="#iso-tile" x="130" y="84" class="tile-0" />
+      <use href="#iso-tile" x="156" y="70" class="tile-1" />
+      <use href="#iso-tile" x="182" y="56" class="tile-4" />
+      <use href="#iso-tile" x="208" y="42" class="tile-3" />
+      <use href="#iso-tile" x="234" y="28" class="tile-2" />
+      <use href="#iso-tile" x="260" y="14" class="tile-1" />
+
+      <use href="#iso-tile" x="52" y="154" class="tile-2" />
+      <use href="#iso-tile" x="78" y="140" class="tile-4" />
+      <use href="#iso-tile" x="104" y="126" class="tile-3" />
+      <use href="#iso-tile" x="130" y="112" class="tile-1" />
+      <use href="#iso-tile" x="156" y="98" class="tile-2" />
+      <use href="#iso-tile" x="182" y="84" class="tile-3" />
+      <use href="#iso-tile" x="208" y="70" class="tile-0" />
+      <use href="#iso-tile" x="234" y="56" class="tile-2" />
+      <use href="#iso-tile" x="260" y="42" class="tile-4" />
+      <use href="#iso-tile" x="286" y="28" class="tile-3" />
+
+      <use href="#iso-tile" x="78" y="168" class="tile-1" />
+      <use href="#iso-tile" x="104" y="154" class="tile-2" />
+      <use href="#iso-tile" x="130" y="140" class="tile-4" />
+      <use href="#iso-tile" x="156" y="126" class="tile-3" />
+      <use href="#iso-tile" x="182" y="112" class="tile-2" />
+      <use href="#iso-tile" x="208" y="98" class="tile-1" />
+      <use href="#iso-tile" x="234" y="84" class="tile-3" />
+      <use href="#iso-tile" x="260" y="70" class="tile-4" />
+      <use href="#iso-tile" x="286" y="56" class="tile-2" />
+      <use href="#iso-tile" x="312" y="42" class="tile-1" />
+
+      <use href="#iso-tile" x="104" y="182" class="tile-0" />
+      <use href="#iso-tile" x="130" y="168" class="tile-1" />
+      <use href="#iso-tile" x="156" y="154" class="tile-3" />
+      <use href="#iso-tile" x="182" y="140" class="tile-4" />
+      <use href="#iso-tile" x="208" y="126" class="tile-2" />
+      <use href="#iso-tile" x="234" y="112" class="tile-1" />
+      <use href="#iso-tile" x="260" y="98" class="tile-2" />
+      <use href="#iso-tile" x="286" y="84" class="tile-3" />
+      <use href="#iso-tile" x="312" y="70" class="tile-4" />
+      <use href="#iso-tile" x="338" y="56" class="tile-2" />
+    </g>
+  </g>
+
+  <g transform="translate(10, 560)" class="typing-6"><use href="#typing" /></g>
+  <g transform="translate(10, 560)" class="msg-6">
+    <rect width="430" height="66" rx="18" class="bubble" />
+    <text x="15" y="27">Programming languages I use:</text>
+    <text x="15" y="50">JavaScript, Python, HTML, CSS, SQL</text>
+  </g>
+
+  <g transform="translate(10, 632)" class="typing-7"><use href="#typing" /></g>
+  <g transform="translate(10, 632)" class="msg-7">
+    <rect width="390" height="42" rx="18" class="bubble" />
+    <text x="15" y="27">Reach me on <a xlink:href="https://www.linkedin.com/in/yvesseraphin">LinkedIn</a>: /in/yvesseraphin</text>
+  </g>
+
+  <g transform="translate(10, 680)" class="typing-8"><use href="#typing" /></g>
+  <g transform="translate(10, 680)" class="msg-8">
+    <rect width="235" height="42" rx="18" class="bubble" />
+    <text x="15" y="27">Have a great Tuesday! <tspan class="emoji">👋</tspan></text>
+  </g>
+</svg>
