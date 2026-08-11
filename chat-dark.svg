@@ -17,10 +17,10 @@
     }
 
     .img-light {
-      display: inline;
+      display: none;
     }
     .img-dark {
-      display: none;
+      display: inline;
     }
 
     .typing-1 { opacity: 0; animation: fade-in-out 1.5s; }

@@ -26,6 +26,10 @@
     </style>
   </head>
   <body>
-    <img src="chat.svg" alt="Animated chat bubbles introducing Seraphin" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="chat-dark.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="chat.svg" />
+      <img src="chat.svg" alt="Animated chat bubbles introducing Seraphin" />
+    </picture>
   </body>
 </html>

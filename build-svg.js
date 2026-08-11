@@ -78,11 +78,27 @@ try {
   console.warn(error.message)
 }
 
+// Read base64 strings for light and dark contribution images
+const lightBuf = await fs.readFile('Seraphin.png')
+const darkBuf = await fs.readFile('Seraphin-Dark.png')
+
+values.imgLightBase64 = lightBuf.toString('base64')
+values.imgDarkBase64 = darkBuf.toString('base64')
+
 let svg = await fs.readFile('template.svg', 'utf-8')
 
 for (const [key, value] of Object.entries(values)) {
   svg = svg.replaceAll(`{${key}}`, value)
 }
 
+// 1. Generate chat.svg (Light mode default + prefers-color-scheme media query)
 await fs.writeFile('chat.svg', svg)
 console.log('Successfully updated chat.svg')
+
+// 2. Generate chat-dark.svg (Dark mode default for GitHub README proxy)
+const darkSvg = svg
+  .replace('.img-light {\n      display: inline;\n    }', '.img-light {\n      display: none;\n    }')
+  .replace('.img-dark {\n      display: none;\n    }', '.img-dark {\n      display: inline;\n    }')
+
+await fs.writeFile('chat-dark.svg', darkSvg)
+console.log('Successfully updated chat-dark.svg')
