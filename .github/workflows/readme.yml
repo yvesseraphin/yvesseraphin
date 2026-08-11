@@ -10,22 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v5
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v5
-        with:
-          node-version: 18
-      - run: npm install
+      - uses: actions/checkout@v4
 
-      - name: Generate readme
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci || npm install
+
+      - name: Generate readme SVGs
         run: node build-svg.js
 
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v4
+      - name: Commit & Push updated SVGs
+        uses: EndBug/add-and-commit@v9
         with:
           author_name: MANZI SHIMWA Yves Seraphin
           author_email: myvesseraphin@gmail.com
-          message: "Auto updating my readme"
+          message: "Auto updating README SVGs"
           add: "*.svg"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
