@@ -73,7 +73,7 @@
       </circle>
     </g>
     <clipPath id="img-clip">
-      <rect width="430" height="268" rx="16" ry="16" />
+      <rect width="430" height="268" rx="0" ry="0" />
     </clipPath>
 <style>
       @font-face {
@@ -141,19 +141,19 @@
   <g transform="translate(10, 120)" class="typing-3"><use href="#typing" /></g>
   <g transform="translate(10, 120)" class="msg-3">
     <rect width="430" height="66" rx="18" class="bubble" />
-    <text x="15" y="27">I'm a software developer and a student at RCA,</text>
-    <text x="15" y="50">learning by building useful projects.</text>
+    <text x="15" y="27">I'm a Software Engineering student at</text>
+    <text x="15" y="50"> RCA</text>
   </g>
   <g transform="translate(10, 192)" class="typing-4"><use href="#typing" /></g>
   <g transform="translate(10, 192)" class="msg-4">
-    <rect width="430" height="66" rx="18" class="bubble" />
-    <text x="15" y="27">I love building useful web applications,</text>
-    <text x="15" y="50">and here is a look at my GitHub contributions:</text>
+    <rect width="360" height="66" rx="18" class="bubble" />
+    <text x="15" y="27">I love building useful applications,</text>
+    <text x="15" y="50">and here is my GitHub contributions:</text>
   </g>
   <g transform="translate(10, 270)" class="typing-5"><use href="#typing" /></g>
   <g transform="translate(10, 270)" class="msg-5">
-    <image class="img-light" width="430" height="268" href="data:image/png;base64,{imgLightBase64}" clip-path="url(#img-clip)" />
-    <image class="img-dark" width="430" height="268" href="data:image/png;base64,{imgDarkBase64}" clip-path="url(#img-clip)" />
+    <image class="img-light" x="-11" y="-7" width="452" height="281" href="data:image/png;base64,{imgLightBase64}" clip-path="url(#img-clip)" />
+    <image class="img-dark" x="-11" y="-7" width="452" height="281" href="data:image/png;base64,{imgDarkBase64}" clip-path="url(#img-clip)" />
   </g>
   <g transform="translate(10, 550)" class="typing-6"><use href="#typing" /></g>
   <g transform="translate(10, 550)" class="msg-6">
