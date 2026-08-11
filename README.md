@@ -5,3 +5,4 @@
     <img alt="Animated chat bubbles introducing Seraphin" src="chat.svg">
   </picture>
 </a>
+<img src="https://yvesseraphin.vercel.app/api/track" width="1" height="1" alt="" style="display:none; visibility:hidden;" />
