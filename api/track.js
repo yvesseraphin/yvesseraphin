@@ -1,3 +1,16 @@
+import { Redis } from '@upstash/redis';
+
+let redis;
+try {
+  const url = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
+  if (url && token) {
+    redis = new Redis({ url, token });
+  }
+} catch (err) {
+  console.warn('Redis initialization skipped:', err.message);
+}
+
 export default async function handler(req, res) {
   const ip = req.headers['x-forwarded-for']?.split(',')[0] || req.headers['x-real-ip'] || 'Unknown IP';
   const country = req.headers['x-vercel-ip-country'] || req.headers['cf-ipcountry'] || 'Unknown Country';
@@ -6,22 +19,30 @@ export default async function handler(req, res) {
   const timestamp = new Date().toLocaleString('en-US', { timeZone: 'UTC' }) + ' UTC';
 
   let totalViews = 1;
-  const countUrl = 'https://komarev.com/ghpvc/?username=yvesseraphin&color=0079ff';
-  
-  try {
-    const countRes = await fetch(countUrl);
-    if (countRes.ok) {
-      const svgText = await countRes.text();
-      const match = svgText.match(/<text[^>]*>(\d+)<\/text>/g);
-      if (match && match.length > 0) {
-        const lastNum = match[match.length - 1].replace(/<[^>]+>/g, '');
-        if (!isNaN(parseInt(lastNum, 10))) {
-          totalViews = parseInt(lastNum, 10);
+
+  if (redis) {
+    try {
+      totalViews = await redis.incr('profile_views');
+    } catch (err) {
+      console.warn('Failed to increment Redis visit count:', err.message);
+    }
+  } else {
+    const countUrl = 'https://komarev.com/ghpvc/?username=yvesseraphin&color=0079ff';
+    try {
+      const countRes = await fetch(countUrl);
+      if (countRes.ok) {
+        const svgText = await countRes.text();
+        const match = svgText.match(/<text[^>]*>(\d+)<\/text>/g);
+        if (match && match.length > 0) {
+          const lastNum = match[match.length - 1].replace(/<[^>]+>/g, '');
+          if (!isNaN(parseInt(lastNum, 10))) {
+            totalViews = parseInt(lastNum, 10);
+          }
         }
       }
+    } catch (e) {
+      console.warn('Failed to fetch profile counter:', e.message);
     }
-  } catch (e) {
-    console.warn('Failed to fetch profile counter:', e.message);
   }
 
   const slackWebhookUrl = process.env.SLACK_WEBHOOK_URL;
