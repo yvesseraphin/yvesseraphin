@@ -159,7 +159,7 @@
   <g transform="translate(10, 550)" class="msg-6">
     <rect width="430" height="66" rx="18" class="bubble" />
     <text x="15" y="27">Programming languages I use:</text>
-    <text x="15" y="50">JavaScript, Python, HTML, CSS, SQL</text>
+    <text x="15" y="50">JavaScript, Python, Java, C, C++</text>
   </g>
   <g transform="translate(10, 624)" class="typing-7"><use href="#typing" /></g>
   <g transform="translate(10, 624)" class="msg-7">
